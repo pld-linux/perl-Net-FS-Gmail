@@ -43,6 +43,7 @@ Perl module that allows using Gmail as file storage.
 	destdir=$RPM_BUILD_ROOT \
 	installdirs=vendor
 ./Build
+sed -ie 's#!perl#!/usr/bin/perl#' bin/gmailfs
 
 %{?with_tests:./Build test}
 
